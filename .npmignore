@@ -1,0 +1,34 @@
+# Archivos de desarrollo
+.eslintrc.cjs
+.prettierrc
+tsconfig.json
+vite.config.ts
+
+# Archivos de prueba
+**/*.test.ts
+**/*.test.tsx
+**/__tests__/
+
+# Archivos de construcción
+node_modules/
+.turbo/
+.next/
+.vercel/
+
+# Archivos del sistema
+.DS_Store
+*.log
+.env*
+
+# Archivos de IDE
+.idea/
+.vscode/
+
+# Archivos de documentación de desarrollo
+docs/
+*.md
+!README.md
+
+# Archivos de git
+.git/
+.gitignore 
