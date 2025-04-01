@@ -18,20 +18,22 @@ module.exports = {
     '.eslintrc.cjs',
     'tailwind.config.js',
     'postcss.config.cjs',
+    'tsup.config.ts',
+    'commitlint.config.cjs',
   ],
   env: {
     browser: true,
     es2023: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'react', 'tailwindcss', 'import', 'jsx-a11y'],
+  plugins: ['@typescript-eslint', 'react', 'import', 'jsx-a11y'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
     'plugin:react/recommended',
-    'plugin:tailwindcss/recommended',
+    // 'plugin:tailwindcss/recommended',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
@@ -87,11 +89,11 @@ module.exports = {
     'import/no-duplicates': 'error',
 
     // Tailwind
-    'tailwindcss/classnames-order': 'error',
-    'tailwindcss/enforces-negative-arbitrary-values': 'error',
-    'tailwindcss/enforces-shorthand': 'error',
-    'tailwindcss/migration-from-tailwind-2': 'error',
-    'tailwindcss/no-custom-classname': 'error',
+    // 'tailwindcss/classnames-order': 'error',
+    // 'tailwindcss/enforces-negative-arbitrary-values': 'error',
+    // 'tailwindcss/enforces-shorthand': 'error',
+    // 'tailwindcss/migration-from-tailwind-2': 'error',
+    // 'tailwindcss/no-custom-classname': 'error',
     '@typescript-eslint/no-misused-promises': 'off',
 
     // General

@@ -1,6 +1,6 @@
 {
   "name": "@in-control/ui",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -138,6 +138,11 @@
       "types": "./dist/components/ui/tooltip.d.ts",
       "import": "./dist/components/ui/tooltip.mjs",
       "require": "./dist/components/ui/tooltip.js"
+    },
+    "./breadcrumb": {
+      "types": "./dist/components/ui/breadcrumb.d.ts",
+      "import": "./dist/components/ui/breadcrumb.mjs",
+      "require": "./dist/components/ui/breadcrumb.js"
     }
   },
   "sideEffects": false,
@@ -171,7 +176,8 @@
     "lint": "eslint \"**/*.{ts,tsx}\" --fix --config .eslintrc.cjs",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "prepublishOnly": "npm run format && npm run lint && npm run build"
+    "prepublishOnly": "npm run format && npm run lint && npm run build",
+    "prepare": "husky"
   },
   "peerDependencies": {
     "next": "^15.2.4",
@@ -179,12 +185,17 @@
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@tailwindcss/postcss": "^4.1.0",
     "@types/node": "^22.13.16",
+    "@types/postcss-import": "^14.0.3",
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
-    "autoprefixer": "^10.4.18",
+    "autoprefixer": "^10.4.21",
+    "commitlint-plugin-function-rules": "^4.0.1",
     "css-loader": "^7.1.2",
     "eslint": "^8.57.0",
     "eslint-config-next": "^15.2.4",
@@ -194,14 +205,17 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-tailwindcss": "^3.14.3",
-    "postcss": "^8.4.35",
+    "husky": "^9.1.7",
+    "postcss": "^8.5.3",
+    "postcss-import": "^16.1.0",
     "postcss-loader": "^8.1.1",
+    "postcss-nesting": "^13.0.1",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "recharts": "^2.15.1",
     "sharp": "^0.33.2",
     "style-loader": "^4.0.0",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.1.0",
     "tailwindcss-animate": "^1.0.7",
     "tsup": "^8.0.2",
     "typescript": "^5.5.0",
@@ -237,7 +251,7 @@
     "@radix-ui/react-toggle-group": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
     "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.5.2",
@@ -251,5 +265,14 @@
     "tailwind-merge": "^3.1.0",
     "vaul": "^1.1.2",
     "zod": "^3.24.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
   }
 }

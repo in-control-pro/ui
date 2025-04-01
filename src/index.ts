@@ -23,6 +23,7 @@ export * from './components/ui/sidebar';
 export * from './components/ui/table';
 export * from './components/ui/tabs';
 export * from './components/ui/tooltip';
+export * from './components/ui/breadcrumb';
 
 export { useIsMobile } from './hooks';
 export { cn } from './lib';

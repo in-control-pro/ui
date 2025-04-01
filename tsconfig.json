@@ -1,27 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "tsBuildInfoFile": "./dist/.tsbuildinfo",
-    "declaration": true,
-    "outDir": "dist",
-    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "noEmit": true,
+    "jsx": "preserve",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "*.config.ts", "*.config.cjs", "*.config.js", "*.config.mjs"],
-  "exclude": ["node_modules", "dist", "tailwind.config.js"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "tsup.config.ts"],
+  "exclude": ["node_modules", "dist"]
 }
