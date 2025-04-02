@@ -16,7 +16,6 @@ module.exports = {
     'dist',
     'node_modules',
     '.eslintrc.cjs',
-    'tailwind.config.js',
     'postcss.config.cjs',
     'tsup.config.ts',
     'commitlint.config.cjs',
